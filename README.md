@@ -12,6 +12,16 @@
 * Actual time needed to complete: 50min
 
 
+## Passing Functions in Props
+
+* Number and name of feature: Passing Functions in Props
+* Estimate of time needed to complete: 2hours
+* Start time: 12:00pm
+* Finish time: 4:00pm
+* Actual time needed to complete: 4hours
+
+
+
 
 
 
