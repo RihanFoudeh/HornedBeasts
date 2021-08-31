@@ -1,7 +1,8 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 
+// import Modal from 'react-bootstrap/Modal'
 
 
 class HornedBeasts extends React.Component {
@@ -9,64 +10,38 @@ class HornedBeasts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        votes : 0
+        like : 0
     }
 }
 
 incrementNumberOfPets = () => {
   this.setState({
-      votes : this.state.votes + 1  
+      like : this.state.like + 1  
+
+
   })
 }
+displayModal = ()=>{
+  this.props.displayModal(this.props.title)
+}
 
-
-
-  render() {
-    
+  render() {   
     return (
       <div>
-<Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={this.props.imageUrl} onClick={this.incrementNumberOfPets}/>
+<Card style={{ width: '18rem' }} onClick={this.displayModal}>
+  <Card.Img variant="top" src={this.props.imageUrl} onClick={this.incrementNumberOfPets} />
   <Card.Body>
     <Card.Title>{this.props.title}</Card.Title>
     <Card.Text>
-    ❤️ =  {this.state.votes} 
+    ❤️ =  {this.state.like} 
     </Card.Text>
     <Card.Text>
     {this.props.description}
-    </Card.Text>
-    
+    </Card.Text> 
   </Card.Body>
-</Card>
-
-
-
-
-
-
-
-
-
-
-        
+</Card>  
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     )
   }
 }
-
 export default HornedBeasts;
