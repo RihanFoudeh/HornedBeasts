@@ -1,6 +1,10 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
 import Row from 'react-bootstrap/Row';
+// import Formlist from './components/react-bootstrap';
+
+
+
 
 class Main extends React.Component {
 
@@ -19,6 +23,7 @@ class Main extends React.Component {
                   keyword={allthink.keyword}
                   horns={allthink.horns}
                   displayModal={this.props.displayModal}
+                  displayModal2={this.props.displayModal2}
                 />
               )
             })
